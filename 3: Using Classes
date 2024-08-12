@@ -1,0 +1,27 @@
+public class Dog {
+  String breed;
+  boolean hasOwner;
+  int age;
+  String owner;
+  
+  public Dog(String dogBreed, boolean dogOwned, int dogYears, String ownerName) {
+    System.out.println("Constructor invoked!");
+    breed = dogBreed;
+    hasOwner = dogOwned;
+    age = dogYears;
+    owner = ownerName;
+  }
+  
+  public static void main(String[] args) {
+    System.out.println("Main method started");
+    Dog fido = new Dog("poodle", false, 4, "Bob");
+    Dog nunzio = new Dog("shiba inu", true, 6, "Jerry");
+    boolean isFidoOlder = fido.age > nunzio.age;
+    int totalDogYears = nunzio.age + fido.age;
+    System.out.println("Two dogs created: a " + fido.breed + " and a " + nunzio.breed);
+    System.out.println("The statement that fido is an older dog is: " + isFidoOlder);
+    System.out.println("The total age of the dogs is: " + totalDogYears);
+    System.out.println("Fide is owned by " + fido.owner + " and Nunzio is owned by " + nunzio.owner);
+    System.out.println("Main method finished");
+  }
+}
